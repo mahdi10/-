@@ -228,7 +228,7 @@ function create_config( )
       "weather",
       "xkcd",
       "youtube" },
-    sudo_users = {168398326},
+    sudo_users = {231264179},
     disabled_channels = {}
   }
   serialize_to_file(config, './data/config.lua')
@@ -259,7 +259,7 @@ function load_plugins()
   for k, v in pairs(_config.enabled_plugins) do
     print("Loading plugin", v)
 
-    local ok, err =  pcall(function()
+  local ok, err =  pcall(function()
       local t = loadfile("plugins/"..v..'.lua')()
       plugins[v] = t
     end)
